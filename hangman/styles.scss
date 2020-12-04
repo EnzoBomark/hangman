@@ -1,0 +1,247 @@
+@charset "UTF-8";
+
+$outline-width: 6px;
+$shadow-width: 4px;
+
+$black: rgb(25, 25, 58);
+$button-background: #f3f2c9;
+$sec-button-background: #c2c098;
+$shadow-color: #a3a271;
+
+$disabled: rgb(233, 85, 79);
+$disabled-shadow: rgb(177, 53, 48);
+
+$right: rgb(165, 218, 117);
+$right-shadow: rgb(115, 163, 61);
+
+$blue: lightblue;
+$blue-shadow: rgb(124, 183, 202);
+
+@import "../accets/global-scss/eightbit-btn";
+
+@mixin buttonColor($main, $shadow) {
+    background-color: $main;
+    box-shadow: inset (-$shadow-width) (-$shadow-width) 0px 0px $shadow;
+
+    &:hover,
+    &:focus {
+        background: darken($main, 3%);
+        box-shadow: inset (-$shadow-width*1.5) (-$shadow-width*1.5) 0px 0px $shadow;
+    }
+
+    &:active {
+        box-shadow: inset $shadow-width $shadow-width 0px 0px $shadow;
+    }
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    user-select: none;
+}
+
+body {
+    transform: scale(0.9);
+    background-color: #f8f1d4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+main {
+    flex: 1;
+    padding: 1.5em;
+    font-family: 'Press Start 2P',
+        cursive;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    #menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+
+        article {
+            width: 90%;
+
+            h1 {
+                margin-top: 150px;
+                text-align: center;
+                text-transform: uppercase;
+                font-size: 40px;
+            }
+
+            h2 {
+                text-align: center;
+                margin-top: 15px;
+                font-size: 20px;
+            }
+        }
+
+        #startGame {
+            margin-top: 80px;
+            @include buttonColor($blue, $blue-shadow);
+        }
+
+        p {
+            margin-top: 100px;
+            text-align: center;
+            font-size: 20px;
+        }
+
+        .category {
+            display: flex;
+            flex-direction: row;
+
+            #countries {
+                &:checked~#countriesBtn {
+                    @include buttonColor($right, $right-shadow);
+                }
+            }
+
+            #states {
+                &:checked~#statesBtn {
+                    @include buttonColor($right, $right-shadow);
+                }
+            }
+
+            #animals {
+                &:checked~#animalsBtn {
+                    @include buttonColor($right, $right-shadow);
+                }
+            }
+
+            label {
+                margin-top: 20px;
+                width: 340px;
+                @include buttonColor($disabled, $disabled-shadow);
+            }
+        }
+
+        input {
+            display: none;
+        }
+
+        label {
+            margin-top: 80px;
+        }
+    }
+
+    .info {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+
+        p {
+            width: 45%;
+            text-align: center;
+            font-family: 'Press Start 2P',
+                cursive;
+            font-size: 20px;
+            margin-top: 40px;
+        }
+    }
+}
+
+.images {
+    margin: 50px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    div {
+        display: flex;
+
+        img {
+            image-rendering: auto;
+            image-rendering: crisp-edges;
+            image-rendering: pixelated;
+            width: 1200px;
+        }
+
+        #tumble {
+            position: absolute;
+            opacity: .8;
+        }
+    }
+}
+
+ul {
+    list-style-type: none;
+}
+
+#startGameBtn {
+    margin-bottom: 150px;
+    visibility: hidden;
+    @include buttonColor($blue, $blue-shadow);
+}
+
+#menuBtn {
+    margin-bottom: 150px;
+    visibility: hidden;
+}
+
+#gameBoard {
+    padding: 10px 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#letterButtons {
+    width: 60%;
+    display: inline-flex;
+    list-style-type: none;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+
+    & button:not(last-child) {
+        margin: 10px;
+        cursor: pointer;
+        max-width: 84px;
+        min-width: 84px;
+    }
+}
+
+#letterBoxes {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    li {
+        display: inline-flex;
+    }
+
+    input {
+        font-family: 'Press Start 2P', cursive;
+        color: $black;
+        font-size: 1.5em;
+        font-weight: bold;
+        line-height: 2em;
+        margin: 1em 0;
+        padding: 0px 5px;
+        text-align: center;
+        width: 2em;
+
+        background-color: transparent;
+        border: 0;
+        border-bottom: $outline-width $black solid;
+    }
+}
+
+#game {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

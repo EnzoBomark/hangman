@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Enzo-Bomark-Hangman</title>
+    <link rel="shortcut icon" href="#">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <main>
+        <audio id="deathSound" src="/accets/Sounds/Wrong.wav"></audio>
+        <audio id="winSound" src="/accets/Sounds/Win.mp3"></audio>
+        <audio id="clickSound" src="/accets/Sounds/click.mp3"></audio>
+
+        <div id="menu">
+            <article>
+                <h1>Hangman</h1>
+                <h2>This is an expirimental take on the classic game of Hangman.</h2>
+            </article>
+
+            <button class="eightbit-btn" id="startGame" onclick="startGame()">Start Game</button>
+
+            <p>Category</p>
+            <section class="category">
+                <input type="checkbox" id="countries" name="check" onclick="onlyOne(this)" checked>
+                <label for="countries" class="eightbit-btn" id="countriesBtn">Countries</label>
+                <input type="checkbox" id="states" name="check" onclick="onlyOne(this)">
+                <label for="states" class="eightbit-btn" id="statesBtn">States</label>
+                <input type="checkbox" id="animals" name="check" onclick="onlyOne(this)">
+                <label for="animals" class="eightbit-btn" id="animalsBtn">Animals</label>
+            </section>
+
+            <input type="checkbox" id="checkbox" checked>
+            <label for="checkbox" class="eightbit-btn" id="soundBtn">Sound On</label>
+        </div>
+
+        <div id="game">
+            <div class="info">
+                <p id="score">Score: Xp</p>
+                <button class="eightbit-btn" type="button" id="startGameBtn" onclick="restart()">Restart</button>
+                <button class="eightbit-btn" type="button" id="menuBtn" onclick="backToMenu()">Menu</button>
+                <p id="highScore">High Score: Yp</p>
+            </div>
+
+            <div id="gameBoard">
+                <div id="letterBoxes">
+                    <div id="wordLength">
+                    </div>
+                </div>
+
+                <div class="images">
+                    <div>
+                        <img src="../accets/images/WestGif/WildWest.gif" alt="hangman">
+                    </div>
+                    <div>
+                        <img id="imageDisplay" src="../accets/images/WestGif/WildWestDefault.png" alt="hangman">
+                        <img id="tumble" src="../accets/images/WestGif/WildWestTumble.gif" alt="hangman">
+                    </div>
+
+                </div>
+                <ul id="letterButtons">
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <script src="../accets/js/arrayLists.js"></script>
+    <script src="../accets/js/menu.js"></script>
+    <script src="../accets/js/script.js"></script>
+
+</body>
+
+</html>

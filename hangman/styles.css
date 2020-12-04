@@ -1,0 +1,444 @@
+.eightbit-btn {
+  background: #f3f2c9;
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  font-size: 30px;
+  padding: 20px;
+  margin: 20px;
+  font-family: 'Press Start 2P', cursive;
+  text-decoration: none;
+  color: #19193a;
+  -webkit-box-shadow: inset -4px -4px 0px 0px #a3a271;
+          box-shadow: inset -4px -4px 0px 0px #a3a271;
+  cursor: pointer;
+}
+
+.eightbit-btn:hover, .eightbit-btn:focus {
+  background: #c2c098;
+  -webkit-box-shadow: inset -6px -6px 0px 0px #a3a271;
+          box-shadow: inset -6px -6px 0px 0px #a3a271;
+}
+
+.eightbit-btn:active {
+  -webkit-box-shadow: inset 4px 4px 0px 0px #a3a271;
+          box-shadow: inset 4px 4px 0px 0px #a3a271;
+}
+
+.eightbit-btn:before, .eightbit-btn:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+}
+
+.eightbit-btn:before {
+  top: -6px;
+  left: 0;
+  border-top: 6px #19193a solid;
+  border-bottom: 6px #19193a solid;
+}
+
+.eightbit-btn:after {
+  left: -6px;
+  top: 0;
+  border-left: 6px #19193a solid;
+  border-right: 6px #19193a solid;
+}
+
+.eightbit-btn:disabled {
+  background-color: #e9554f;
+  -webkit-box-shadow: inset -4px -4px 0px 0px #b13530;
+          box-shadow: inset -4px -4px 0px 0px #b13530;
+}
+
+.eightbit-btn:disabled:hover, .eightbit-btn:disabled:focus {
+  background: #e74841;
+  -webkit-box-shadow: inset -6px -6px 0px 0px #b13530;
+          box-shadow: inset -6px -6px 0px 0px #b13530;
+}
+
+.right:disabled {
+  background-color: #a5da75;
+  -webkit-box-shadow: inset -4px -4px 0px 0px #73a33d;
+          box-shadow: inset -4px -4px 0px 0px #73a33d;
+}
+
+.right:disabled:hover, .right:disabled:focus {
+  background: #9dd769;
+  -webkit-box-shadow: inset -6px -6px 0px 0px #73a33d;
+          box-shadow: inset -6px -6px 0px 0px #73a33d;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+body {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+  background-color: #f8f1d4;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 1.5em;
+  font-family: 'Press Start 2P', cursive;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main #menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main #menu article {
+  width: 90%;
+}
+
+main #menu article h1 {
+  margin-top: 150px;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 40px;
+}
+
+main #menu article h2 {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 20px;
+}
+
+main #menu #startGame {
+  margin-top: 80px;
+  background-color: lightblue;
+  -webkit-box-shadow: inset -4px -4px 0px 0px #7cb7ca;
+          box-shadow: inset -4px -4px 0px 0px #7cb7ca;
+}
+
+main #menu #startGame:hover, main #menu #startGame:focus {
+  background: #a1d2e2;
+  -webkit-box-shadow: inset -6px -6px 0px 0px #7cb7ca;
+          box-shadow: inset -6px -6px 0px 0px #7cb7ca;
+}
+
+main #menu #startGame:active {
+  -webkit-box-shadow: inset 4px 4px 0px 0px #7cb7ca;
+          box-shadow: inset 4px 4px 0px 0px #7cb7ca;
+}
+
+main #menu p {
+  margin-top: 100px;
+  text-align: center;
+  font-size: 20px;
+}
+
+main #menu .category {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+main #menu .category #countries:checked ~ #countriesBtn {
+  background-color: #a5da75;
+  -webkit-box-shadow: inset -4px -4px 0px 0px #73a33d;
+          box-shadow: inset -4px -4px 0px 0px #73a33d;
+}
+
+main #menu .category #countries:checked ~ #countriesBtn:hover, main #menu .category #countries:checked ~ #countriesBtn:focus {
+  background: #9dd769;
+  -webkit-box-shadow: inset -6px -6px 0px 0px #73a33d;
+          box-shadow: inset -6px -6px 0px 0px #73a33d;
+}
+
+main #menu .category #countries:checked ~ #countriesBtn:active {
+  -webkit-box-shadow: inset 4px 4px 0px 0px #73a33d;
+          box-shadow: inset 4px 4px 0px 0px #73a33d;
+}
+
+main #menu .category #states:checked ~ #statesBtn {
+  background-color: #a5da75;
+  -webkit-box-shadow: inset -4px -4px 0px 0px #73a33d;
+          box-shadow: inset -4px -4px 0px 0px #73a33d;
+}
+
+main #menu .category #states:checked ~ #statesBtn:hover, main #menu .category #states:checked ~ #statesBtn:focus {
+  background: #9dd769;
+  -webkit-box-shadow: inset -6px -6px 0px 0px #73a33d;
+          box-shadow: inset -6px -6px 0px 0px #73a33d;
+}
+
+main #menu .category #states:checked ~ #statesBtn:active {
+  -webkit-box-shadow: inset 4px 4px 0px 0px #73a33d;
+          box-shadow: inset 4px 4px 0px 0px #73a33d;
+}
+
+main #menu .category #animals:checked ~ #animalsBtn {
+  background-color: #a5da75;
+  -webkit-box-shadow: inset -4px -4px 0px 0px #73a33d;
+          box-shadow: inset -4px -4px 0px 0px #73a33d;
+}
+
+main #menu .category #animals:checked ~ #animalsBtn:hover, main #menu .category #animals:checked ~ #animalsBtn:focus {
+  background: #9dd769;
+  -webkit-box-shadow: inset -6px -6px 0px 0px #73a33d;
+          box-shadow: inset -6px -6px 0px 0px #73a33d;
+}
+
+main #menu .category #animals:checked ~ #animalsBtn:active {
+  -webkit-box-shadow: inset 4px 4px 0px 0px #73a33d;
+          box-shadow: inset 4px 4px 0px 0px #73a33d;
+}
+
+main #menu .category label {
+  margin-top: 20px;
+  width: 340px;
+  background-color: #e9554f;
+  -webkit-box-shadow: inset -4px -4px 0px 0px #b13530;
+          box-shadow: inset -4px -4px 0px 0px #b13530;
+}
+
+main #menu .category label:hover, main #menu .category label:focus {
+  background: #e74841;
+  -webkit-box-shadow: inset -6px -6px 0px 0px #b13530;
+          box-shadow: inset -6px -6px 0px 0px #b13530;
+}
+
+main #menu .category label:active {
+  -webkit-box-shadow: inset 4px 4px 0px 0px #b13530;
+          box-shadow: inset 4px 4px 0px 0px #b13530;
+}
+
+main #menu input {
+  display: none;
+}
+
+main #menu label {
+  margin-top: 80px;
+}
+
+main .info {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+main .info p {
+  width: 45%;
+  text-align: center;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 20px;
+  margin-top: 40px;
+}
+
+.images {
+  margin: 50px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.images div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.images div img {
+  image-rendering: auto;
+  image-rendering: crisp-edges;
+  -ms-interpolation-mode: nearest-neighbor;
+      image-rendering: -webkit-optimize-contrast;
+      image-rendering: -moz-crisp-edges;
+      image-rendering: -o-pixelated;
+      image-rendering: pixelated;
+  width: 1200px;
+}
+
+.images div #tumble {
+  position: absolute;
+  opacity: .8;
+}
+
+ul {
+  list-style-type: none;
+}
+
+#startGameBtn {
+  margin-bottom: 150px;
+  visibility: hidden;
+  background-color: lightblue;
+  -webkit-box-shadow: inset -4px -4px 0px 0px #7cb7ca;
+          box-shadow: inset -4px -4px 0px 0px #7cb7ca;
+}
+
+#startGameBtn:hover, #startGameBtn:focus {
+  background: #a1d2e2;
+  -webkit-box-shadow: inset -6px -6px 0px 0px #7cb7ca;
+          box-shadow: inset -6px -6px 0px 0px #7cb7ca;
+}
+
+#startGameBtn:active {
+  -webkit-box-shadow: inset 4px 4px 0px 0px #7cb7ca;
+          box-shadow: inset 4px 4px 0px 0px #7cb7ca;
+}
+
+#menuBtn {
+  margin-bottom: 150px;
+  visibility: hidden;
+}
+
+#gameBoard {
+  padding: 10px 0;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#letterButtons {
+  width: 60%;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  list-style-type: none;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#letterButtons button:not(last-child) {
+  margin: 10px;
+  cursor: pointer;
+  max-width: 84px;
+  min-width: 84px;
+}
+
+#letterBoxes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#letterBoxes li {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+#letterBoxes input {
+  font-family: 'Press Start 2P', cursive;
+  color: #19193a;
+  font-size: 1.5em;
+  font-weight: bold;
+  line-height: 2em;
+  margin: 1em 0;
+  padding: 0px 5px;
+  text-align: center;
+  width: 2em;
+  background-color: transparent;
+  border: 0;
+  border-bottom: 6px #19193a solid;
+}
+
+#game {
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+/*# sourceMappingURL=styles.css.map */
