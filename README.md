@@ -1,7 +1,6 @@
-T
+*This was a short school project for Chas Academy*
 
 # Three Different Types of Input
-
 ## Lang [English]
 
 1. Mouse control, click on the virtual buttons.
